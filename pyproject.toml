@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "LogicDaemon-win32-symlink-resolve"
+version = "0.0.1"
+authors = [
+    { name="LogicDaemon" },
+]
+description = "A simple module."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    # Symlinks are supported on Windows Vista and later
+    "Operating System :: Microsoft :: Windows :: Windows Vista",
+]
+dependencies = []
+
+[project.urls]
+"Homepage" = "https://github.com/LogicDaemon/py3-win32-symlink-resolve"
+"Bug Tracker" = "https://github.com/LogicDaemon/py3-win32-symlink-resolve/issues"
+
+[tool.setuptools]
+py-modules = ["resolve_win32_symlink"]
