@@ -31,17 +31,4 @@ if target_path:
 - **Supported Reparse Points:** This module specifically resolves symlinks (`IO_REPARSE_TAG_SYMLINK`). Other types of reparse points, such as directory junctions (`IO_REPARSE_TAG_MOUNT_POINT`), are not supported and will resolve to None.
 - **Path Prefixes:** Windows symlink targets often use the NT device prefix `\??\` in the raw substitution name. To preserve idiomatic paths, `resolve_symlink` extracts the cleaner `PrintName` when available, falling back to the target's `SubstituteName` only if `PrintName` is empty.
 
-## Build and publish to PyPI
-
-```bash
-# Ensure you have the build tool and twine installed
-pip install build twine
-
-# Build the distribution packages
-python -m build
-
-# Upload to PyPI (this will ask for credentials)
-twine upload dist/*
-```
-
-See [Uploading the distribution archives](https://packaging.python.org/en/latest/tutorials/packaging-projects/#uploading-the-distribution-archives) for more details.
+See [comments in the source code](https://github.com/LogicDaemon/py3-win32-symlink-resolve/blob/main/resolve_win32_symlink/resolve_symlink.py) for more details.
